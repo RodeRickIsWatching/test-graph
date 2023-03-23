@@ -1,0 +1,32 @@
+specVersion: 0.0.1
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: Contract
+    network: arbitrum-one
+    source:
+      address: "0x53a2fe72985Ff45362408CA918ddE42B9D831670"
+      abi: Contract
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - BalanceDeposit
+        - SwapSuccess
+        - TokenDeposit
+        - TokenWithdraw
+      abis:
+        - name: Contract
+          file: ./abis/Contract.json
+      eventHandlers:
+        - event: BalanceDeposit(indexed address,int256,int256)
+          handler: handleBalanceDeposit
+        - event: SwapSuccess(indexed address,int256,int256,int256)
+          handler: handleSwapSuccess
+        - event: TokenDeposit(indexed address,int256,int256,int256)
+          handler: handleTokenDeposit
+        - event: TokenWithdraw(indexed address,int256,int256,int256)
+          handler: handleTokenWithdraw
+      file: ./src/mapping.ts
