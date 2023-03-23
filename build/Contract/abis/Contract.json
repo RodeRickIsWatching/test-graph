@@ -21,14 +21,26 @@
         "name": "option_",
         "type": "address"
       },
-      { "internalType": "contract IERC20", "name": "usdc_", "type": "address" },
-      { "internalType": "contract IERC20", "name": "weth_", "type": "address" },
+      {
+        "internalType": "contract IERC20",
+        "name": "usdc_",
+        "type": "address"
+      },
+      {
+        "internalType": "contract IERC20",
+        "name": "weth_",
+        "type": "address"
+      },
       {
         "internalType": "contract AggregatorV3Interface",
         "name": "priceProvider_",
         "type": "address"
       },
-      { "internalType": "bool", "name": "real_", "type": "bool" }
+      {
+        "internalType": "bool",
+        "name": "real_",
+        "type": "bool"
+      }
     ],
     "stateMutability": "nonpayable",
     "type": "constructor"
@@ -155,7 +167,11 @@
     "inputs": [],
     "name": "USDCToken",
     "outputs": [
-      { "internalType": "contract IERC20", "name": "", "type": "address" }
+      {
+        "internalType": "contract IERC20",
+        "name": "",
+        "type": "address"
+      }
     ],
     "stateMutability": "view",
     "type": "function"
@@ -164,7 +180,11 @@
     "inputs": [],
     "name": "WETHToken",
     "outputs": [
-      { "internalType": "contract IERC20", "name": "", "type": "address" }
+      {
+        "internalType": "contract IERC20",
+        "name": "",
+        "type": "address"
+      }
     ],
     "stateMutability": "view",
     "type": "function"
@@ -172,23 +192,47 @@
   {
     "inputs": [],
     "name": "getFuturePrice",
-    "outputs": [{ "internalType": "int256", "name": "", "type": "int256" }],
+    "outputs": [
+      {
+        "internalType": "int256",
+        "name": "",
+        "type": "int256"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
-      { "internalType": "bool", "name": "modifyLP", "type": "bool" },
+      {
+        "internalType": "bool",
+        "name": "modifyLP",
+        "type": "bool"
+      },
       {
         "internalType": "int256[]",
         "name": "optionPrices",
         "type": "int256[]"
       },
-      { "internalType": "uint256", "name": "time", "type": "uint256" },
-      { "internalType": "bytes", "name": "_signature", "type": "bytes" }
+      {
+        "internalType": "uint256",
+        "name": "time",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes",
+        "name": "_signature",
+        "type": "bytes"
+      }
     ],
     "name": "getTokenPrice",
-    "outputs": [{ "internalType": "int256", "name": "", "type": "int256" }],
+    "outputs": [
+      {
+        "internalType": "int256",
+        "name": "",
+        "type": "int256"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
@@ -233,14 +277,26 @@
   },
   {
     "inputs": [
-      { "internalType": "int256", "name": "_usdcAmount", "type": "int256" },
+      {
+        "internalType": "int256",
+        "name": "_usdcAmount",
+        "type": "int256"
+      },
       {
         "internalType": "int256[]",
         "name": "optionPrices",
         "type": "int256[]"
       },
-      { "internalType": "uint256", "name": "time", "type": "uint256" },
-      { "internalType": "bytes", "name": "_signature", "type": "bytes" }
+      {
+        "internalType": "uint256",
+        "name": "time",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes",
+        "name": "_signature",
+        "type": "bytes"
+      }
     ],
     "name": "lpDepositUSDC",
     "outputs": [],
@@ -249,14 +305,26 @@
   },
   {
     "inputs": [
-      { "internalType": "int256", "name": "_wethAmount", "type": "int256" },
+      {
+        "internalType": "int256",
+        "name": "_wethAmount",
+        "type": "int256"
+      },
       {
         "internalType": "int256[]",
         "name": "optionPrices",
         "type": "int256[]"
       },
-      { "internalType": "uint256", "name": "time", "type": "uint256" },
-      { "internalType": "bytes", "name": "_signature", "type": "bytes" }
+      {
+        "internalType": "uint256",
+        "name": "time",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes",
+        "name": "_signature",
+        "type": "bytes"
+      }
     ],
     "name": "lpDepositWETH",
     "outputs": [],
@@ -265,15 +333,31 @@
   },
   {
     "inputs": [
-      { "internalType": "int256", "name": "_tokenNum", "type": "int256" },
-      { "internalType": "int256", "name": "currencyType", "type": "int256" },
+      {
+        "internalType": "int256",
+        "name": "_tokenNum",
+        "type": "int256"
+      },
+      {
+        "internalType": "int256",
+        "name": "currencyType",
+        "type": "int256"
+      },
       {
         "internalType": "int256[]",
         "name": "optionPrices",
         "type": "int256[]"
       },
-      { "internalType": "uint256", "name": "time", "type": "uint256" },
-      { "internalType": "bytes", "name": "_signature", "type": "bytes" }
+      {
+        "internalType": "uint256",
+        "name": "time",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes",
+        "name": "_signature",
+        "type": "bytes"
+      }
     ],
     "name": "lpWithdrawToken",
     "outputs": [],
@@ -284,39 +368,95 @@
     "inputs": [],
     "name": "option",
     "outputs": [
-      { "internalType": "contract IOption", "name": "", "type": "address" }
+      {
+        "internalType": "contract IOption",
+        "name": "",
+        "type": "address"
+      }
     ],
     "stateMutability": "view",
     "type": "function"
   },
   {
-    "inputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
     "name": "traderBalanceUSDC",
-    "outputs": [{ "internalType": "int256", "name": "", "type": "int256" }],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [{ "internalType": "address", "name": "", "type": "address" }],
-    "name": "traderBalanceWETH",
-    "outputs": [{ "internalType": "int256", "name": "", "type": "int256" }],
+    "outputs": [
+      {
+        "internalType": "int256",
+        "name": "",
+        "type": "int256"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
-      { "internalType": "int8", "name": "currencyType", "type": "int8" },
-      { "internalType": "uint256", "name": "epochId", "type": "uint256" },
-      { "internalType": "uint256", "name": "productId", "type": "uint256" },
-      { "internalType": "int256", "name": "buySize", "type": "int256" },
-      { "internalType": "int256", "name": "buyPrice", "type": "int256" },
-      { "internalType": "uint256", "name": "futurePrice", "type": "uint256" },
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "traderBalanceWETH",
+    "outputs": [
+      {
+        "internalType": "int256",
+        "name": "",
+        "type": "int256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "int8",
+        "name": "currencyType",
+        "type": "int8"
+      },
+      {
+        "internalType": "uint256",
+        "name": "epochId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "productId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "int256",
+        "name": "buySize",
+        "type": "int256"
+      },
+      {
+        "internalType": "int256",
+        "name": "buyPrice",
+        "type": "int256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "futurePrice",
+        "type": "uint256"
+      },
       {
         "internalType": "uint256",
         "name": "buyPriceGenerateTime",
         "type": "uint256"
       },
-      { "internalType": "bytes", "name": "_signature", "type": "bytes" }
+      {
+        "internalType": "bytes",
+        "name": "_signature",
+        "type": "bytes"
+      }
     ],
     "name": "traderBuyOption",
     "outputs": [],
@@ -325,7 +465,11 @@
   },
   {
     "inputs": [
-      { "internalType": "int256", "name": "wethMarginAmount", "type": "int256" }
+      {
+        "internalType": "int256",
+        "name": "wethMarginAmount",
+        "type": "int256"
+      }
     ],
     "name": "traderChangeLongOrderMargin",
     "outputs": [],
@@ -334,7 +478,11 @@
   },
   {
     "inputs": [
-      { "internalType": "int256", "name": "usdcMarginAmount", "type": "int256" }
+      {
+        "internalType": "int256",
+        "name": "usdcMarginAmount",
+        "type": "int256"
+      }
     ],
     "name": "traderChangeShortOrderMargin",
     "outputs": [],
@@ -343,9 +491,21 @@
   },
   {
     "inputs": [
-      { "internalType": "int8", "name": "currencyType", "type": "int8" },
-      { "internalType": "uint256[]", "name": "epochIds", "type": "uint256[]" },
-      { "internalType": "uint256[]", "name": "productIds", "type": "uint256[]" }
+      {
+        "internalType": "int8",
+        "name": "currencyType",
+        "type": "int8"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "epochIds",
+        "type": "uint256[]"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "productIds",
+        "type": "uint256[]"
+      }
     ],
     "name": "traderClaimProfit",
     "outputs": [],
@@ -354,8 +514,16 @@
   },
   {
     "inputs": [
-      { "internalType": "int8", "name": "currencyType", "type": "int8" },
-      { "internalType": "int256", "name": "closeTokenAmount", "type": "int256" }
+      {
+        "internalType": "int8",
+        "name": "currencyType",
+        "type": "int8"
+      },
+      {
+        "internalType": "int256",
+        "name": "closeTokenAmount",
+        "type": "int256"
+      }
     ],
     "name": "traderCloseLongOrder",
     "outputs": [],
@@ -364,8 +532,16 @@
   },
   {
     "inputs": [
-      { "internalType": "int8", "name": "currencyType", "type": "int8" },
-      { "internalType": "int256", "name": "closeTokenAmount", "type": "int256" }
+      {
+        "internalType": "int8",
+        "name": "currencyType",
+        "type": "int8"
+      },
+      {
+        "internalType": "int256",
+        "name": "closeTokenAmount",
+        "type": "int256"
+      }
     ],
     "name": "traderCloseShortOrder",
     "outputs": [],
@@ -374,7 +550,11 @@
   },
   {
     "inputs": [
-      { "internalType": "int256", "name": "usdcAmount", "type": "int256" }
+      {
+        "internalType": "int256",
+        "name": "usdcAmount",
+        "type": "int256"
+      }
     ],
     "name": "traderDepositUSDC",
     "outputs": [],
@@ -383,7 +563,11 @@
   },
   {
     "inputs": [
-      { "internalType": "int256", "name": "wethAmount", "type": "int256" }
+      {
+        "internalType": "int256",
+        "name": "wethAmount",
+        "type": "int256"
+      }
     ],
     "name": "traderDepositWETH",
     "outputs": [],
@@ -392,9 +576,21 @@
   },
   {
     "inputs": [
-      { "internalType": "int8", "name": "currencyType", "type": "int8" },
-      { "internalType": "int256", "name": "marginAmount", "type": "int256" },
-      { "internalType": "int256", "name": "leverage", "type": "int256" }
+      {
+        "internalType": "int8",
+        "name": "currencyType",
+        "type": "int8"
+      },
+      {
+        "internalType": "int256",
+        "name": "marginAmount",
+        "type": "int256"
+      },
+      {
+        "internalType": "int256",
+        "name": "leverage",
+        "type": "int256"
+      }
     ],
     "name": "traderOpenLongOrder",
     "outputs": [],
@@ -403,9 +599,21 @@
   },
   {
     "inputs": [
-      { "internalType": "int8", "name": "currencyType", "type": "int8" },
-      { "internalType": "int256", "name": "marginAmount", "type": "int256" },
-      { "internalType": "int256", "name": "leverage", "type": "int256" }
+      {
+        "internalType": "int8",
+        "name": "currencyType",
+        "type": "int8"
+      },
+      {
+        "internalType": "int256",
+        "name": "marginAmount",
+        "type": "int256"
+      },
+      {
+        "internalType": "int256",
+        "name": "leverage",
+        "type": "int256"
+      }
     ],
     "name": "traderOpenShortOrder",
     "outputs": [],
@@ -414,7 +622,11 @@
   },
   {
     "inputs": [
-      { "internalType": "int256", "name": "usdcAmount", "type": "int256" }
+      {
+        "internalType": "int256",
+        "name": "usdcAmount",
+        "type": "int256"
+      }
     ],
     "name": "traderUSDCSwapWETH",
     "outputs": [],
@@ -423,7 +635,11 @@
   },
   {
     "inputs": [
-      { "internalType": "int256", "name": "wethAmount", "type": "int256" }
+      {
+        "internalType": "int256",
+        "name": "wethAmount",
+        "type": "int256"
+      }
     ],
     "name": "traderWETHSwapUSDC",
     "outputs": [],
@@ -432,7 +648,11 @@
   },
   {
     "inputs": [
-      { "internalType": "int256", "name": "usdcAmount", "type": "int256" }
+      {
+        "internalType": "int256",
+        "name": "usdcAmount",
+        "type": "int256"
+      }
     ],
     "name": "traderWithdrawUSDC",
     "outputs": [],
@@ -441,7 +661,11 @@
   },
   {
     "inputs": [
-      { "internalType": "int256", "name": "wethAmount", "type": "int256" }
+      {
+        "internalType": "int256",
+        "name": "wethAmount",
+        "type": "int256"
+      }
     ],
     "name": "traderWithdrawWETH",
     "outputs": [],
@@ -451,7 +675,13 @@
   {
     "inputs": [],
     "name": "usdcDemical",
-    "outputs": [{ "internalType": "int256", "name": "", "type": "int256" }],
+    "outputs": [
+      {
+        "internalType": "int256",
+        "name": "",
+        "type": "int256"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   }
